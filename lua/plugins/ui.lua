@@ -17,6 +17,9 @@ wk.add({
   { "<leader>x", group = "Diagnostics" },
 })
 
+vim.keymap.set("n", "]t", "<cmd>tabnext<cr>", { desc = "Next tab", })
+vim.keymap.set("n", "[t", "<cmd>tabprevious<cr>", { desc = "Previous tab", })
+
 
 -- local function project_file()
 --   local file = vim.fn.expand("%:p")
