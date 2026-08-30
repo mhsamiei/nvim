@@ -1,54 +1,54 @@
 local dap = require("dap")
 
 dap.adapters.gdb = {
-    type = "executable",
-    command = "gdb",
-    args = {
-        "-i",
-        "dap",
-    },
+  type = "executable",
+  command = "gdb",
+  args = {
+    "-i",
+    "dap",
+  },
 }
 
 dap.configurations.c = {
-    {
-        name = "Launch C",
-        type = "gdb",
-        request = "launch",
+  {
+    name = "Launch C",
+    type = "gdb",
+    request = "launch",
 
-        program = function()
-            return vim.fn.input(
-                "Executable: ",
-                vim.fn.getcwd() .. "/build/",
-                "file"
-            )
-        end,
+    program = function()
+      return vim.fn.input(
+        "Executable: ",
+        vim.fn.getcwd() .. "/build/",
+        "file"
+      )
+    end,
 
-        cwd = "${workspaceFolder}",
+    cwd = "${workspaceFolder}",
 
-        stopAtBeginningOfMain = false,
+    stopAtBeginningOfMain = false,
 
-        runInTerminal = false,
-    },
+    runInTerminal = false,
+  },
 }
 
 dap.configurations.cpp = {
-    {
-        name = "Launch C++",
-        type = "gdb",
-        request = "launch",
+  {
+    name = "Launch C++",
+    type = "gdb",
+    request = "launch",
 
-        program = function()
-            return vim.fn.input(
-                "Executable: ",
-                vim.fn.getcwd() .. "/build/",
-                "file"
-            )
-        end,
+    program = function()
+      return vim.fn.input(
+        "Executable: ",
+        vim.fn.getcwd() .. "/build/",
+        "file"
+      )
+    end,
 
-        cwd = "${workspaceFolder}",
+    cwd = "${workspaceFolder}",
 
-        stopAtBeginningOfMain = false,
+    stopAtBeginningOfMain = false,
 
-        runInTerminal = false,
-    },
+    runInTerminal = false,
+  },
 }

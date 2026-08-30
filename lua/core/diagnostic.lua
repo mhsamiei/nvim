@@ -1,18 +1,18 @@
 vim.diagnostic.config({
-    virtual_text = {
-        spacing = 2,
-    },
+  virtual_text = {
+    spacing = 2,
+  },
 
-    signs = true,
+  signs = true,
 
-    underline = true,
+  underline = true,
 
-    update_in_insert = false,
+  update_in_insert = false,
 
-    severity_sort = true,
+  severity_sort = true,
 
-    float = {
-        border = "rounded",
-        source = "if_many",
-    },
+  float = {
+    border = "rounded",
+    source = "if_many",
+  },
 })

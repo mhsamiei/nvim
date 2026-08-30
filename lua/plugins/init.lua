@@ -11,6 +11,7 @@ require("plugins.dap")
 
 require("plugins.git")
 require("plugins.ui")
+require("plugins.rest")
 require("plugins.diagnostics")
 require("plugins.csv")
 

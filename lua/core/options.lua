@@ -78,9 +78,9 @@ opt.updatetime = 250
 -- =========================
 
 opt.completeopt = {
-    "menu",
-    "menuone",
-    "noselect",
+  "menu",
+  "menuone",
+  "noselect",
 }
 
 opt.pumheight = 10
@@ -128,7 +128,7 @@ opt.wildmenu = true
 
 opt.list = true
 opt.listchars = {
-    tab = "→ ",
-    trail = "·",
-    nbsp = "␣",
+  tab = "→ ",
+  trail = "·",
+  nbsp = "␣",
 }

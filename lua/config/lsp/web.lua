@@ -3,24 +3,24 @@
 -- })
 --
 vim.lsp.config("emmet_language_server", {
-    filetypes = {
-        "html",
-        "css",
-        "scss",
-        "javascriptreact",
-        "typescriptreact",
-        "vue",
-        "svelte",
-        "astro",
-    },
+  filetypes = {
+    "html",
+    "css",
+    "scss",
+    "javascriptreact",
+    "typescriptreact",
+    "vue",
+    "svelte",
+    "astro",
+  },
 
-    init_options = {
-        showAbbreviationSuggestions = true,
+  init_options = {
+    showAbbreviationSuggestions = true,
 
-        showExpandedAbbreviation = "always",
+    showExpandedAbbreviation = "always",
 
-        showSuggestionsAsSnippet = true,
-    },
+    showSuggestionsAsSnippet = true,
+  },
 })
 
 vim.lsp.enable("emmet_language_server")

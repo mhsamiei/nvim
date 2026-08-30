@@ -27,6 +27,7 @@ treesitter.install({
   "bash",
   "java",
   "sql",
+  "http",
 })
 
 vim.api.nvim_create_autocmd("FileType", {
@@ -51,6 +52,7 @@ vim.api.nvim_create_autocmd("FileType", {
     "sh",
     "java",
     "sql",
+    "http",
   },
 
   callback = function(args)

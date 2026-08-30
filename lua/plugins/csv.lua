@@ -1,17 +1,17 @@
 vim.pack.add({
-    "https://github.com/hat0uma/csvview.nvim",
+  "https://github.com/hat0uma/csvview.nvim",
 })
 
 require("csvview").setup({
-    parser = {
-        delimiter = {
-            ft = {
-                csv = ",",
-            },
-        },
+  parser = {
+    delimiter = {
+      ft = {
+        csv = ",",
+      },
     },
+  },
 
-    view = {
-        display_mode = "border",
-    },
+  view = {
+    display_mode = "border",
+  },
 })
