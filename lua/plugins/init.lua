@@ -15,5 +15,6 @@ require("plugins.rest")
 require("plugins.diagnostics")
 require("plugins.csv")
 
+require("plugins.rust")
 require("plugins.sql")
 require("plugins.java")
