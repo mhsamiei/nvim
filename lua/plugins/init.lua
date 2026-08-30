@@ -1,7 +1,6 @@
 require("plugins.web-devicons")
 require("plugins.treesitter")
 require("plugins.telescope")
-require("plugins.oil")
 
 -- blink must load before anything that explicitly requires it
 require("plugins.completion")
@@ -15,4 +14,5 @@ require("plugins.ui")
 require("plugins.diagnostics")
 require("plugins.csv")
 
+require("plugins.sql")
 require("plugins.java")
