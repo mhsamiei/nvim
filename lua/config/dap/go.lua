@@ -1,49 +1,49 @@
 local dap = require("dap")
 
 dap.adapters.delve = {
-    type = "server",
+  type = "server",
 
-    port = "${port}",
+  port = "${port}",
 
-    executable = {
-        command = "dlv",
+  executable = {
+    command = "dlv",
 
-        args = {
-            "dap",
-            "-l",
-            "127.0.0.1:${port}",
-        },
+    args = {
+      "dap",
+      "-l",
+      "127.0.0.1:${port}",
     },
+  },
 }
 
-dap.configurationsgo = {
-    {
-        type = "delve",
-        name = "Debug",
-        request = "launch",
-        program = "${file}",
-    },
+dap.configurations.go = {
+  {
+    type = "delve",
+    name = "Debug",
+    request = "launch",
+    program = "${file}",
+  },
 
-    {
-        type = "delve",
-        name = "Debug Package",
-        request = "launch",
-        program = "${workspaceFolder}",
-    },
+  {
+    type = "delve",
+    name = "Debug Package",
+    request = "launch",
+    program = "${workspaceFolder}",
+  },
 
-    {
-        type = "delve",
-        name = "Debug Test",
-        request = "launch",
-        mode = "test",
-        program = "${file}",
-    },
+  {
+    type = "delve",
+    name = "Debug Test",
+    request = "launch",
+    mode = "test",
+    program = "${file}",
+  },
 
-    {
-        type = "delve",
-        name = "Debug Package Tests",
-        request = "launch",
-        mode = "test",
-        program = "${workspaceFolder}",
-    },
+  {
+    type = "delve",
+    name = "Debug Package Tests",
+    request = "launch",
+    mode = "test",
+    program = "${workspaceFolder}",
+  },
 }
