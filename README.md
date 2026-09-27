@@ -5,6 +5,7 @@
 ## install lsp python
 
 install python package with [uv](https://github.com/astral-sh/uv)
+
 `uv tool install basedpyright`
 `uv tool install ruff`
 
@@ -131,6 +132,7 @@ arduino_sensor/
 ```
 
 for build project use [arduino-cli](https://github.com/arduino/arduino-cli)
+
 `arduino-cli compile`
 
 ### Another project
