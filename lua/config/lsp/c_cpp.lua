@@ -14,6 +14,9 @@ vim.lsp.config("clangd", {
 
     -- Enable clang-tidy diagnostics
     "--clang-tidy",
+
+    -- Embedded project(STM32)
+    "--query-driver=/usr/bin/arm-none-eabi-*"
   },
 
   root_markers = {
