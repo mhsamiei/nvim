@@ -1,5 +1,10 @@
 # nvim
 
+# Formatter file
+
+- .jsonl need to install [jq](https://github.com/jqlang/jq)
+- .lua install [StyLua](https://github.com/JohnnyMorganz/StyLua)
+
 # For python
 
 ## install lsp python

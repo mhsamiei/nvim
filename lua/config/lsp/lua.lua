@@ -1,35 +1,35 @@
 vim.lsp.config("lua_ls", {
-  capabilities = require("blink.cmp").get_lsp_capabilities(),
+	capabilities = require("blink.cmp").get_lsp_capabilities(),
 
-  settings = {
-    Lua = {
-      runtime = {
-        version = "LuaJIT",
-      },
+	settings = {
+		Lua = {
+			runtime = {
+				version = "LuaJIT",
+			},
 
-      diagnostics = {
-        globals = {
-          "vim",
-        },
-      },
+			diagnostics = {
+				globals = {
+					"vim",
+				},
+			},
 
-      workspace = {
-        checkThirdParty = false,
+			workspace = {
+				checkThirdParty = false,
 
-        library = {
-          vim.env.VIMRUNTIME,
-        },
-      },
+				library = {
+					vim.env.VIMRUNTIME,
+				},
+			},
 
-      telemetry = {
-        enable = false,
-      },
+			telemetry = {
+				enable = false,
+			},
 
-      completion = {
-        callSnippet = "Replace",
-      },
-    },
-  },
+			completion = {
+				callSnippet = "Replace",
+			},
+		},
+	},
 })
 
 vim.lsp.enable("lua_ls")

@@ -1,31 +1,31 @@
 vim.lsp.config("clangd", {
-  cmd = {
-    "clangd",
+	cmd = {
+		"clangd",
 
-    -- Project-wide background index
-    "--background-index",
+		-- Project-wide background index
+		"--background-index",
 
-    -- Better completion information
-    "--completion-style=detailed",
+		-- Better completion information
+		"--completion-style=detailed",
 
-    -- Let clangd suggest/include headers
-    "--header-insertion=iwyu",
-    "--header-insertion-decorators",
+		-- Let clangd suggest/include headers
+		"--header-insertion=iwyu",
+		"--header-insertion-decorators",
 
-    -- Enable clang-tidy diagnostics
-    "--clang-tidy",
+		-- Enable clang-tidy diagnostics
+		"--clang-tidy",
 
-    -- Embedded project(STM32)
-    "--query-driver=/usr/bin/arm-none-eabi-*"
-  },
+		-- Embedded project(STM32)
+		"--query-driver=/usr/bin/arm-none-eabi-*",
+	},
 
-  root_markers = {
-    "compile_commands.json",
-    "compile_flags.txt",
-    ".clangd",
-    "CMakeLists.txt",
-    ".git",
-  },
+	root_markers = {
+		"compile_commands.json",
+		"compile_flags.txt",
+		".clangd",
+		"CMakeLists.txt",
+		".git",
+	},
 })
 
 vim.lsp.enable("clangd")

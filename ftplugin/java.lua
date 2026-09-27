@@ -18,9 +18,9 @@ vim.opt_local.smartindent = false
 vim.opt_local.cindent = false
 
 vim.opt_local.formatoptions:remove({
-  "c",
-  "r",
-  "o",
+	"c",
+	"r",
+	"o",
 })
 
 -- ============================================================
@@ -34,17 +34,17 @@ local java = require("java")
 -- ============================================================
 
 vim.keymap.set("n", "<leader>jb", function()
-  java.build.build_workspace()
+	java.build.build_workspace()
 end, {
-  buffer = true,
-  desc = "Java build workspace",
+	buffer = true,
+	desc = "Java build workspace",
 })
 
 vim.keymap.set("n", "<leader>jc", function()
-  java.build.clean_workspace()
+	java.build.clean_workspace()
 end, {
-  buffer = true,
-  desc = "Java clean workspace",
+	buffer = true,
+	desc = "Java clean workspace",
 })
 
 -- ============================================================
@@ -52,24 +52,24 @@ end, {
 -- ============================================================
 
 vim.keymap.set("n", "<leader>jr", function()
-  java.runner.built_in.run_app({})
+	java.runner.built_in.run_app({})
 end, {
-  buffer = true,
-  desc = "Java run application",
+	buffer = true,
+	desc = "Java run application",
 })
 
 vim.keymap.set("n", "<leader>js", function()
-  java.runner.built_in.stop_app()
+	java.runner.built_in.stop_app()
 end, {
-  buffer = true,
-  desc = "Java stop application",
+	buffer = true,
+	desc = "Java stop application",
 })
 
 vim.keymap.set("n", "<leader>jl", function()
-  java.runner.built_in.toggle_logs()
+	java.runner.built_in.toggle_logs()
 end, {
-  buffer = true,
-  desc = "Java toggle logs",
+	buffer = true,
+	desc = "Java toggle logs",
 })
 
 -- ============================================================
@@ -77,24 +77,24 @@ end, {
 -- ============================================================
 
 vim.keymap.set("n", "<leader>jt", function()
-  java.test.run_current_method()
+	java.test.run_current_method()
 end, {
-  buffer = true,
-  desc = "Java test current method",
+	buffer = true,
+	desc = "Java test current method",
 })
 
 vim.keymap.set("n", "<leader>jT", function()
-  java.test.run_current_class()
+	java.test.run_current_class()
 end, {
-  buffer = true,
-  desc = "Java test current class",
+	buffer = true,
+	desc = "Java test current class",
 })
 
 vim.keymap.set("n", "<leader>ja", function()
-  java.test.run_all_tests()
+	java.test.run_all_tests()
 end, {
-  buffer = true,
-  desc = "Java test all",
+	buffer = true,
+	desc = "Java test all",
 })
 
 -- ============================================================
@@ -102,24 +102,24 @@ end, {
 -- ============================================================
 
 vim.keymap.set("n", "<leader>jdt", function()
-  java.test.debug_current_method()
+	java.test.debug_current_method()
 end, {
-  buffer = true,
-  desc = "Java debug current method",
+	buffer = true,
+	desc = "Java debug current method",
 })
 
 vim.keymap.set("n", "<leader>jdT", function()
-  java.test.debug_current_class()
+	java.test.debug_current_class()
 end, {
-  buffer = true,
-  desc = "Java debug current class",
+	buffer = true,
+	desc = "Java debug current class",
 })
 
 vim.keymap.set("n", "<leader>jda", function()
-  java.test.debug_all_tests()
+	java.test.debug_all_tests()
 end, {
-  buffer = true,
-  desc = "Java debug all tests",
+	buffer = true,
+	desc = "Java debug all tests",
 })
 
 -- ============================================================
@@ -127,10 +127,10 @@ end, {
 -- ============================================================
 
 vim.keymap.set("n", "<leader>jp", function()
-  java.profile.ui()
+	java.profile.ui()
 end, {
-  buffer = true,
-  desc = "Java profiles",
+	buffer = true,
+	desc = "Java profiles",
 })
 
 -- ============================================================
@@ -138,29 +138,29 @@ end, {
 -- ============================================================
 
 vim.keymap.set("n", "<leader>jrv", function()
-  java.refactor.extract_variable()
+	java.refactor.extract_variable()
 end, {
-  buffer = true,
-  desc = "Java extract variable",
+	buffer = true,
+	desc = "Java extract variable",
 })
 
 vim.keymap.set("n", "<leader>jrc", function()
-  java.refactor.extract_constant()
+	java.refactor.extract_constant()
 end, {
-  buffer = true,
-  desc = "Java extract constant",
+	buffer = true,
+	desc = "Java extract constant",
 })
 
 vim.keymap.set("n", "<leader>jrm", function()
-  java.refactor.extract_method()
+	java.refactor.extract_method()
 end, {
-  buffer = true,
-  desc = "Java extract method",
+	buffer = true,
+	desc = "Java extract method",
 })
 
 vim.keymap.set("n", "<leader>jrf", function()
-  java.refactor.extract_field()
+	java.refactor.extract_field()
 end, {
-  buffer = true,
-  desc = "Java extract field",
+	buffer = true,
+	desc = "Java extract field",
 })

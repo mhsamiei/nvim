@@ -1,185 +1,179 @@
 local dap = require("dap")
 
-local js_debug = vim.fn.expand(
-  "~/.local/share/nvim/debug/js-debug/src/dapDebugServer.js"
-)
+local js_debug = vim.fn.expand("~/.local/share/nvim/debug/js-debug/src/dapDebugServer.js")
 
 -- JavaScript / TypeScript debugger
 dap.adapters["pwa-node"] = {
-  type = "server",
-  host = "127.0.0.1",
-  port = "${port}",
+	type = "server",
+	host = "127.0.0.1",
+	port = "${port}",
 
-  executable = {
-    command = "node",
-    args = {
-      js_debug,
-      "${port}",
-    },
-  },
+	executable = {
+		command = "node",
+		args = {
+			js_debug,
+			"${port}",
+		},
+	},
 }
 
 -- Browser debugger
 dap.adapters["pwa-chrome"] = {
-  type = "server",
-  host = "127.0.0.1",
-  port = "${port}",
+	type = "server",
+	host = "127.0.0.1",
+	port = "${port}",
 
-  executable = {
-    command = "node",
-    args = {
-      js_debug,
-      "${port}",
-    },
-  },
+	executable = {
+		command = "node",
+		args = {
+			js_debug,
+			"${port}",
+		},
+	},
 }
-
 
 ----------------------------------------------------------------------
 -- JavaScript
 ----------------------------------------------------------------------
 
 dap.configurations.javascript = {
-  {
-    type = "pwa-node",
-    request = "launch",
-    name = "Launch current file",
+	{
+		type = "pwa-node",
+		request = "launch",
+		name = "Launch current file",
 
-    program = "${file}",
+		program = "${file}",
 
-    cwd = "${workspaceFolder}",
+		cwd = "${workspaceFolder}",
 
-    sourceMaps = true,
-  },
+		sourceMaps = true,
+	},
 
-  {
-    type = "pwa-node",
-    request = "launch",
-    name = "Launch npm dev",
+	{
+		type = "pwa-node",
+		request = "launch",
+		name = "Launch npm dev",
 
-    runtimeExecutable = "npm",
+		runtimeExecutable = "npm",
 
-    runtimeArgs = {
-      "run",
-      "dev",
-    },
+		runtimeArgs = {
+			"run",
+			"dev",
+		},
 
-    cwd = "${workspaceFolder}",
+		cwd = "${workspaceFolder}",
 
-    console = "integratedTerminal",
+		console = "integratedTerminal",
 
-    sourceMaps = true,
-  },
+		sourceMaps = true,
+	},
 
-  {
-    type = "pwa-node",
-    request = "launch",
-    name = "Launch npm start",
+	{
+		type = "pwa-node",
+		request = "launch",
+		name = "Launch npm start",
 
-    runtimeExecutable = "npm",
+		runtimeExecutable = "npm",
 
-    runtimeArgs = {
-      "run",
-      "start",
-    },
+		runtimeArgs = {
+			"run",
+			"start",
+		},
 
-    cwd = "${workspaceFolder}",
+		cwd = "${workspaceFolder}",
 
-    console = "integratedTerminal",
+		console = "integratedTerminal",
 
-    sourceMaps = true,
-  },
+		sourceMaps = true,
+	},
 }
-
 
 ----------------------------------------------------------------------
 -- TypeScript
 ----------------------------------------------------------------------
 
 dap.configurations.typescript = {
-  {
-    type = "pwa-node",
-    request = "launch",
-    name = "Launch current file",
+	{
+		type = "pwa-node",
+		request = "launch",
+		name = "Launch current file",
 
-    program = "${file}",
+		program = "${file}",
 
-    cwd = "${workspaceFolder}",
+		cwd = "${workspaceFolder}",
 
-    sourceMaps = true,
+		sourceMaps = true,
 
-    runtimeExecutable = "node",
-  },
+		runtimeExecutable = "node",
+	},
 
-  {
-    type = "pwa-node",
-    request = "launch",
-    name = "Launch npm dev",
+	{
+		type = "pwa-node",
+		request = "launch",
+		name = "Launch npm dev",
 
-    runtimeExecutable = "npm",
+		runtimeExecutable = "npm",
 
-    runtimeArgs = {
-      "run",
-      "dev",
-    },
+		runtimeArgs = {
+			"run",
+			"dev",
+		},
 
-    cwd = "${workspaceFolder}",
+		cwd = "${workspaceFolder}",
 
-    console = "integratedTerminal",
+		console = "integratedTerminal",
 
-    sourceMaps = true,
-  },
+		sourceMaps = true,
+	},
 
-  {
-    type = "pwa-node",
-    request = "launch",
-    name = "Launch npm start",
+	{
+		type = "pwa-node",
+		request = "launch",
+		name = "Launch npm start",
 
-    runtimeExecutable = "npm",
+		runtimeExecutable = "npm",
 
-    runtimeArgs = {
-      "run",
-      "start",
-    },
+		runtimeArgs = {
+			"run",
+			"start",
+		},
 
-    cwd = "${workspaceFolder}",
+		cwd = "${workspaceFolder}",
 
-    console = "integratedTerminal",
+		console = "integratedTerminal",
 
-    sourceMaps = true,
-  },
+		sourceMaps = true,
+	},
 }
-
 
 ----------------------------------------------------------------------
 -- React / JSX
 ----------------------------------------------------------------------
 
 dap.configurations.javascriptreact = {
-  {
-    type = "pwa-chrome",
-    request = "launch",
-    name = "Launch React",
+	{
+		type = "pwa-chrome",
+		request = "launch",
+		name = "Launch React",
 
-    url = "http://localhost:5173",
+		url = "http://localhost:5173",
 
-    webRoot = "${workspaceFolder}",
-  },
+		webRoot = "${workspaceFolder}",
+	},
 }
-
 
 ----------------------------------------------------------------------
 -- React / TSX
 ----------------------------------------------------------------------
 
 dap.configurations.typescriptreact = {
-  {
-    type = "pwa-chrome",
-    request = "launch",
-    name = "Launch React",
+	{
+		type = "pwa-chrome",
+		request = "launch",
+		name = "Launch React",
 
-    url = "http://localhost:5173",
+		url = "http://localhost:5173",
 
-    webRoot = "${workspaceFolder}",
-  },
+		webRoot = "${workspaceFolder}",
+	},
 }

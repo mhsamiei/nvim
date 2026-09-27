@@ -1,25 +1,24 @@
 vim.pack.add({
-  "https://github.com/folke/which-key.nvim",
-  "https://github.com/nvim-lualine/lualine.nvim",
+	"https://github.com/folke/which-key.nvim",
+	"https://github.com/nvim-lualine/lualine.nvim",
 })
 
 local wk = require("which-key")
 
 wk.add({
-  { "<leader>b", group = "Buffer" },
-  { "<leader>d", group = "Debug" },
-  { "<leader>f", group = "Find" },
-  { "<leader>g", group = "Git" },
-  { "<leader>l", group = "LSP" },
-  { "<leader>q", group = "Quit" },
-  { "<leader>t", group = "Treesitter" },
-  { "<leader>w", group = "Window" },
-  { "<leader>x", group = "Diagnostics" },
+	{ "<leader>b", group = "Buffer" },
+	{ "<leader>d", group = "Debug" },
+	{ "<leader>f", group = "Find" },
+	{ "<leader>g", group = "Git" },
+	{ "<leader>l", group = "LSP" },
+	{ "<leader>q", group = "Quit" },
+	{ "<leader>t", group = "Treesitter" },
+	{ "<leader>w", group = "Window" },
+	{ "<leader>x", group = "Diagnostics" },
 })
 
-vim.keymap.set("n", "]t", "<cmd>tabnext<cr>", { desc = "Next tab", })
-vim.keymap.set("n", "[t", "<cmd>tabprevious<cr>", { desc = "Previous tab", })
-
+vim.keymap.set("n", "]t", "<cmd>tabnext<cr>", { desc = "Next tab" })
+vim.keymap.set("n", "[t", "<cmd>tabprevious<cr>", { desc = "Previous tab" })
 
 -- local function project_file()
 --   local file = vim.fn.expand("%:p")
@@ -37,90 +36,89 @@ vim.keymap.set("n", "[t", "<cmd>tabprevious<cr>", { desc = "Previous tab", })
 --
 
 local function project_file()
-  local file = vim.fn.expand("%:p")
+	local file = vim.fn.expand("%:p")
 
-  if file == "" then
-    return ""
-  end
+	if file == "" then
+		return ""
+	end
 
-  return vim.fn.fnamemodify(file, ":.")
+	return vim.fn.fnamemodify(file, ":.")
 end
 
-
 require("lualine").setup({
-  options = {
-    globalstatus = true,
+	options = {
+		globalstatus = true,
 
-    section_separators = "",
-    component_separators = "",
+		section_separators = "",
+		component_separators = "",
 
-    refresh = {
-      statusline = 100,
-      refresh_time = 100,
-    },
-  },
+		refresh = {
+			statusline = 100,
+			refresh_time = 100,
+		},
+	},
 
-  sections = {
-    lualine_a = {
-      "mode",
-    },
+	sections = {
+		lualine_a = {
+			"mode",
+		},
 
-    lualine_b = {
-      "branch",
-      "diff",
-      "diagnostics",
-    },
+		lualine_b = {
+			"branch",
+			"diff",
+			"diagnostics",
+		},
 
-    lualine_c = {
-      -- {
-      --   "filename",
-      --   path = 0,
-      -- },
-      project_file,
-    },
+		lualine_c = {
+			-- {
+			--   "filename",
+			--   path = 0,
+			-- },
+			project_file,
+		},
 
-    lualine_x = {
-      "encoding",
-      "fileformat",
+		lualine_x = {
+			"encoding",
+			"fileformat",
 
-      {
-        "lsp_status",
+			{
+				"lsp_status",
 
-        icon = "",
+				icon = "",
 
-        symbols = {
-          spinner = {
-            "⠋",
-            "⠙",
-            "⠹",
-            "⠸",
-            "⠼",
-            "⠴",
-            "⠦",
-            "⠧",
-            "⠇",
-            "⠏",
-          },
+				symbols = {
+					spinner = {
+						"⠋",
+						"⠙",
+						"⠹",
+						"⠸",
+						"⠼",
+						"⠴",
+						"⠦",
+						"⠧",
+						"⠇",
+						"⠏",
+					},
 
-          done = "✓",
+					done = "✓",
 
-          separator = " ",
-        },
+					separator = " ",
+				},
 
-        ignore_lsp = {},
+				ignore_lsp = {},
 
-        show_name = true,
-      },
+				show_name = true,
+			},
 
-      "filetype",
-    },
+			"filetype",
+		},
 
-    lualine_y = {
-      "progress",
-    },
+		lualine_y = {
+			"progress",
+		},
 
-    lualine_z = {
-      "location",
-    },
-  },
+		lualine_z = {
+			"location",
+		},
+	},
 })
