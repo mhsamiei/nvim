@@ -24,6 +24,13 @@ require("conform").setup({
 		sh = { "shfmt" },
 		lua = { "stylua" },
 	},
+	-- jq معمولاً pretty-print می‌کند.
+	-- برای JSONL می‌خواهیم هر object دقیقاً یک خط باشد.
+	formatters = {
+		jq = {
+			args = { "-c" },
+		},
+	},
 
 	format_on_save = {
 		timeout_ms = 3000,
