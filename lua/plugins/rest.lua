@@ -12,7 +12,7 @@ vim.pack.add({
 
 vim.g.rest_nvim = {
 	request = {
-		skip_ssl_verification = false,
+		skip_ssl_verification = true,
 	},
 
 	response = {
@@ -30,9 +30,6 @@ vim.g.rest_nvim = {
 	},
 }
 
--- vim.keymap.set("n", "<leader>rr", "<cmd>Rest run<cr>", { desc = "Run HTTP request", })
--- vim.keymap.set("n", "<leader>rl", "<cmd>Rest last<cr>", { desc = "Run last HTTP request", })
--- vim.keymap.set("n", "<leader>ro", "<cmd>Rest open<cr>", { desc = "Open HTTP response", })
 local wk = require("which-key")
 
 wk.add({
